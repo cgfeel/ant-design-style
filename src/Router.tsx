@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 
 const router = {
     '/': lazy(() => import('./App')),
+    '/typical': lazy(() => import('./page/Typical')),
 };
 
 type RoterType = typeof router;

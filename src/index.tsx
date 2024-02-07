@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { FC } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import Router from './Router';
+import GithubCorner from './components/GithubCorner';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const App: FC = () => {
+  return (
+    <>
+      <Router />
+      <GithubCorner />
+    </>
+  );
+};
+
 root.render(
   <React.StrictMode>
     <App />
