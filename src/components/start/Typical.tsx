@@ -1,4 +1,5 @@
 import { createStyles } from 'antd-style';
+import { FC } from 'react';
 
 const useStyles = createStyles(({ token, css }) => ({
   // Supports the writing style of css object
@@ -14,6 +15,7 @@ const useStyles = createStyles(({ token, css }) => ({
     flexDirection: 'column',
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginBottom: 100,
   },
   // Also supports obtaining the same writing experience as normal css through css string templates
   card: css`
@@ -34,12 +36,12 @@ const useStyles = createStyles(({ token, css }) => ({
   `,
 }));
 
-export default () => {
+const Typical: FC = () => {
   // The styles object in the useStyles method is cached by default, so there is no need to worry about re-rendering issues
   const { styles, cx, theme } = useStyles();
 
   return (
-    // Use cx to organize className
+    // Use cx to organize className 
     <div className={cx('a-simple-create-style-demo-classname', styles.container)}>
       <div className={styles.card}>createStyles Demo</div>
       {/* The theme object contains all token and theme information */}
@@ -47,3 +49,5 @@ export default () => {
     </div>
   );
 };
+
+export default Typical;
