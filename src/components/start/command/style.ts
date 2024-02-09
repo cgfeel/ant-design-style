@@ -18,7 +18,8 @@ const useStyles = createStyles({
             rgba(8, 123, 255, .2) 0px 20px 200px;
         padding: 1px;
         position: relative;
-        width: 600px;`,
+        width: 600px;
+    `,
     layout: {
         alignItems: 'center',
         backgroundColor: '#0e0f11',

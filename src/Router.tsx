@@ -1,12 +1,13 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy } from "react";
 
 const router = {
-    '/': lazy(() => import('./App')),
-    '/start': lazy(() => import('./page/Start')),
+    "/": lazy(() => import("./App")),
+    "/start": lazy(() => import("./page/Start")),
+    "/theme": lazy(() => import("./page/Theme")),
 };
 
 type RoterType = typeof router;
-type RouterKey =  keyof RoterType;
+type RouterKey = keyof RoterType;
 
 export default function Router() {
     const { pathname } = window.location;
@@ -15,9 +16,7 @@ export default function Router() {
     return Router === undefined ? (
         <>This page is 404.</>
     ) : (
-        <Suspense
-            fallback={<>Loading...</>}
-        >
+        <Suspense fallback={<>Loading...</>}>
             <Router />
         </Suspense>
     );

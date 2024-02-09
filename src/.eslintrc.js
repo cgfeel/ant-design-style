@@ -1,3 +1,4 @@
+// https://stackoverflow.com/a/63887916/4815301
 module.exports = {
     // extends: ['airbnb-base', 'plugin:flowtype/recommended', 'prettier'],
     // 定义文件继承的子规范
@@ -47,6 +48,7 @@ module.exports = {
       'max-len': 'off',
       'no-underscore-dangle': 'off',
       "react/jsx-uses-react": "off",
-      "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/no-empty-interface": "off"
     }
-  };
+};
