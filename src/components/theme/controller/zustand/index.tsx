@@ -12,7 +12,7 @@ const ZustandTheme: FC = () => {
     return (
         <div className={styles.wraper}>
             <h2>
-                受控模式：通过<code>zustand</code>
+                受控模式：通过<code>zustand</code>切换主题
             </h2>
             <ThemeProvider themeMode={themeMode}>
                 <ThemeControler extra={<Controller />} />
