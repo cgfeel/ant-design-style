@@ -1,29 +1,34 @@
 import { Card, Flex, Segmented, SegmentedProps } from "antd";
-import { ThemeMode } from "antd-style";
-import { FC } from "react";
+import { ThemeAppearance, ThemeMode } from "antd-style";
+import { SegmentedOptions } from "antd/es/segmented";
 
-const options: OptionItem[] = [
-    { label: "自动", value: "auto" },
-    { label: "亮色", value: "light" },
-    { label: "暗色", value: "dark" },
-];
-
-const PickCard: FC<PickCardProps> = ({ value, onChange }) => {
+const PickCard = <T extends string = string, U extends FormatDate<T> = FormatDate<T>>({
+    value,
+    onChange,
+    options,
+}: PickCardProps<T, U>) => {
+    const defaultOptions = [
+        { label: "自动", value: "auto" },
+        { label: "亮色", value: "light" },
+        { label: "暗色", value: "dark" },
+    ] as SegmentedOptions<U>;
     return (
         <Card size="small">
             <Flex align="center" gap={16}>
                 主题模式：
-                <Segmented options={options} value={value} onChange={onChange} />
+                <Segmented<U> options={options || defaultOptions} value={value} onChange={onChange} />
             </Flex>
         </Card>
     );
 };
 
-type OptionItem = {
-    label: string;
-    value: ThemeMode;
-};
+type FormatDate<Pattern extends string> = Pattern extends ThemeMode ? ThemeMode : CustomAppearance;
 
-export interface PickCardProps extends Pick<SegmentedProps<ThemeMode>, "onChange" | "value"> {}
+export type CustomAppearance = ThemeAppearance | "grey";
+
+export interface PickCardProps<T extends string = string, U extends FormatDate<T> = FormatDate<T>>
+    extends Pick<SegmentedProps<U>, "onChange" | "value"> {
+    options?: SegmentedProps<U>["options"];
+}
 
 export default PickCard;

@@ -3,6 +3,11 @@ import AutoTheme from "../components/theme/AutoTheme";
 import PickTheme from "../components/theme/controller/pick";
 import ZustandTheme from "../components/theme/controller/zustand";
 import ThemeCustom from "../components/theme/custom";
+import CustomToken from "../components/theme/defined/custom";
+import CustomApp from "../components/theme/defined/custom/CustomApp";
+import CustomAppearanceCom from "../components/theme/defined/custom/CustomApparance";
+import ThemeAppearance from "../components/theme/defined/ThemeAppearance";
+import ThemeToken from "../components/theme/defined/ThemeToken";
 import SelectTheme from "../components/theme/provider";
 
 const Theme: FC = () => (
@@ -12,6 +17,11 @@ const Theme: FC = () => (
         <PickTheme />
         <ZustandTheme />
         <ThemeCustom />
+        <ThemeToken />
+        <ThemeAppearance />
+        <CustomToken />
+        <CustomApp />
+        <CustomAppearanceCom />
     </>
 );
 
