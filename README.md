@@ -11,11 +11,11 @@
 -   使用`react-app-rewired`作为启动，编译脚本 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/package.json#L24C1-L29C7)]
 -   使用`customize-cra`作为`webpack`配置 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/config-overrides.js)]
     -   包含 2 套解决方案`react-app-rewired`和`customize-cra`
--   在`src`目录下添加`.eslintrc.js`作为`eslint`自定义解决方案 [查看](https://github.com/cgfeel/ant-design-style/blob/main/src/.eslintrc.js)
+-   在`src`目录下添加`.eslintrc.js`作为`eslint`自定义解决方案 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/.eslintrc.js)]
 
 #### 书写样式
 
-url: `/start`，目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/Start.tsx)]
+URL: `/start`，目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/Start.tsx)]
 
 包含：
 
@@ -27,7 +27,7 @@ url: `/start`，目录：[[查看](https://github.com/cgfeel/ant-design-style/bl
 
 #### 主题切换
 
--   url: `/theme`，目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/Theme.tsx)]
+URL: `/theme`，目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/Theme.tsx)]
 
 主题切换：
 
@@ -60,7 +60,7 @@ cd ant-design-style
 npm install
 ```
 
-** 开发环境 **
+**开发环境**
 
 -   OS: OSX 12.7
 -   NodeJS: v21.6.1
