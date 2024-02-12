@@ -1,6 +1,6 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { createStyles } from "antd-style";
-import BaseBtns from "./BaseBtns";
+import BaseBtns, { BaseBtnsProps } from "./BaseBtns";
 
 const useStyles = createStyles(
     ({ css, cx, token }) => {
@@ -74,12 +74,6 @@ const ButtonGroup: FC<ButtonGroupProps> = props => {
     return <BaseBtns {...props} styles={styles} cx={cx} />;
 };
 
-type ItemType = { key: "default" | "filled" | "primary" | "text"; value: ReactNode; className?: string };
-
-export interface ButtonGroupProps {
-    className: string;
-    list: ItemType[];
-    title: string;
-}
+export interface ButtonGroupProps extends Pick<BaseBtnsProps, "className" | "list" | "title"> {}
 
 export default ButtonGroup;

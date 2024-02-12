@@ -1,9 +1,16 @@
-import { FC, ReactNode } from "react";
+import { FormDemoToken } from "./stylesInstance";
+import { FC } from "react";
+import BaseBtns, { BaseBtnsProps } from "./BaseBtns";
 import { createStyles } from "antd-style";
-import BaseBtns from "./BaseBtns";
 
-const useStyles = createStyles(({ css, cx, token }) => {
-    const prefix = `my-btn`;
+// https://github.com/ant-design/antd-style/commit/b394d9e9cdac7dd27df31463b808337586a00409
+declare module "antd-style" {
+    // eslint-disable-next-line @typescript-eslint/no-empty-interface
+    export interface CustomToken extends FormDemoToken {}
+}
+
+const useStyles = createStyles(({ prefixCls, token, css, cx }, { useInstance }: StylesProps) => {
+    const prefix = `${useInstance ? prefixCls : "my"}-btn`;
     return {
         container: cx(
             prefix,
@@ -43,7 +50,7 @@ const useStyles = createStyles(({ css, cx, token }) => {
             `${prefix}-primary`,
             css`
                 &.${prefix}-primary {
-                    background-color: ${token.colorPrimary};
+                    background-color: ${useInstance ? token.primaryColor : token.colorPrimary};
                     color: ${token.colorTextLightSolid};
                     :hover {
                         background: ${token.colorPrimaryHover};
@@ -66,17 +73,15 @@ const useStyles = createStyles(({ css, cx, token }) => {
     };
 });
 
-const ButtonDefault: FC<ButtonGroupProps> = props => {
-    const { styles, cx } = useStyles();
+const ButtonDefault: FC<ButtonGroupProps> = ({ useInstance, ...props }) => {
+    const { styles, cx } = useStyles({ useInstance });
     return <BaseBtns {...props} styles={styles} cx={cx} />;
 };
 
-type ItemType = { key: "default" | "filled" | "primary" | "text"; value: ReactNode; className?: string };
-
-export interface ButtonGroupProps {
-    className: string;
-    list: ItemType[];
-    title: string;
+interface StylesProps {
+    useInstance?: boolean;
 }
+
+export interface ButtonGroupProps extends Pick<BaseBtnsProps, "className" | "list" | "title">, StylesProps {}
 
 export default ButtonDefault;

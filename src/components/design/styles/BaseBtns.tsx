@@ -18,9 +18,9 @@ type KeysType = "default" | "filled" | "primary" | "text";
 type ItemType = { key: KeysType; value: ReactNode; className?: string };
 
 export interface BaseBtnsProps extends Pick<ReturnStyles<Record<KeysType | "container", string>>, "cx" | "styles"> {
-    className: string;
     list: ItemType[];
     title: string;
+    className?: string;
 }
 
 export default BaseBtns;
