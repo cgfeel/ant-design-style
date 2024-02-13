@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 const router = {
     "/": lazy(() => import("./App")),
     "/design": lazy(() => import("./page/Design")),
+    "/scss": lazy(() => import("./page/Scss")),
     "/start": lazy(() => import("./page/Start")),
     "/styled": lazy(() => import("./page/Styled")),
     "/theme": lazy(() => import("./page/Theme")),
