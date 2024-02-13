@@ -1,7 +1,7 @@
-import { FormDemoToken } from "./stylesInstance";
+import { createStyles } from "antd-style";
 import { FC } from "react";
 import BaseBtns, { BaseBtnsProps } from "./BaseBtns";
-import { createStyles } from "antd-style";
+import { FormDemoToken } from "./stylesInstance";
 
 // https://github.com/ant-design/antd-style/commit/b394d9e9cdac7dd27df31463b808337586a00409
 declare module "antd-style" {

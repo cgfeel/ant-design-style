@@ -4,6 +4,7 @@ const router = {
     "/": lazy(() => import("./App")),
     "/design": lazy(() => import("./page/Design")),
     "/start": lazy(() => import("./page/Start")),
+    "/styled": lazy(() => import("./page/Styled")),
     "/theme": lazy(() => import("./page/Theme")),
 };
 
