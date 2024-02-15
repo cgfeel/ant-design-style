@@ -1,0 +1,105 @@
+@use '../global.module.scss';
+
+$font-size-base: 14px;
+$font-size-sm: 12px;
+$ant-prefix: ant;
+$text-color: rgba(0, 0, 0, .85);
+$text-color-secondary: rgba(0, 0, 0, .65);
+$root-entry-name: "default";
+$pro-card-statistic-prefix-cls: "#{$ant-prefix}-pro-card-statistic";
+
+.container {
+    background-color: #f1f2f5;
+    padding: 24px;
+}
+
+.#{$pro-card-statistic-prefix-cls} {
+    display: flex;
+    font-size: $font-size-base;
+    & + & {
+        margin-top: 4px;
+    }
+    &-content {
+        width: 100%;
+    }
+    &-description {
+        width: 100%;
+    }
+    &-layout-horizontal {
+        display: flex;
+        justify-content: space-between;
+        .#{$ant-prefix}-statistic-content-value {
+            font-weight: 500;
+        }
+        .#{$ant-prefix}-statistic-title {
+            margin-bottom: 0;
+        }
+        .#{$ant-prefix}-statistic-content,
+        .#{$ant-prefix}-statistic-content-prefix,
+        .#{$ant-prefix}-statistic-content-suffix,
+        .#{$ant-prefix}-statistic-content-value-decimal,
+        .#{$ant-prefix}-statistic-title {
+            font-size: $font-size-base;
+        }
+    }
+    &-layout-inline {
+        color: $text-color-secondary;
+        display: inline-flex;
+        .#{$ant-prefix}-statistic-content {
+            color: $text-color-secondary;
+        }
+        .#{$ant-prefix}-statistic-title {
+            margin-bottom: 0;
+            margin-right: 6px;
+        }
+        .#{$ant-prefix}-statistic-content,
+        .#{$ant-prefix}-statistic-content-prefix,
+        .#{$ant-prefix}-statistic-content-suffix,
+        .#{$ant-prefix}-statistic-content-value-decimal,
+        .#{$ant-prefix}-statistic-title {
+            font-size: $font-size-sm;
+        }
+    }
+    &-icon {
+        margin-right: 16px;
+    }
+    &-tip {
+        margin-left: 4px;
+    }
+    &-trend-icon {
+        border-bottom: 9px solid #000;
+        border-left: 3.5px solid transparent;
+        border-right: 3.5px solid transparent;
+        height: 0;
+        width: 0;
+        &-down {
+            transform: rotate(180deg);
+        }
+        &-up {
+            transform: rotate(0deg);
+        }
+    }
+    &-trend-down {
+        .#{$ant-prefix}-statistic-content {
+            color: #389e0d;
+            .#{$pro-card-statistic-prefix-cls}-trend-icon {
+                border-bottom-color: #52c41a;
+            }
+        }
+    }
+    &-trend-up {
+        .#{$ant-prefix}-statistic-content {
+            color: #f5222d;
+            .#{$pro-card-statistic-prefix-cls}-trend-icon {
+                border-bottom-color: #f5222d;
+            }
+        }
+    }
+    &-wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .#{$ant-prefix}-statistic-title {
+        color: $text-color;
+    }
+}
