@@ -22,7 +22,7 @@
 -   包含章节：
     -   快速上手-书写样式[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/create-styles)]
 
-包含：
+**包含：**
 
 -   典型用例
 -   静态写法
@@ -40,7 +40,7 @@
     -   快速上手-切换主题[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/switch-theme)]
     -   快速上手-自定义主题[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/custom-theme)]
 
-切换主题：
+**切换主题：**
 
 -   通过`appearance`设置主题
 -   通过`themeMode`跟随系统主题
@@ -49,7 +49,7 @@
 -   定制主题：修改主色与紧凑模式
 -   定制主题：自定义暗色风格
 
-自定义主题：
+**自定义主题：**
 
 -   通过 `token` 设置 `theme`
 -   通过函数定义主题
@@ -57,7 +57,7 @@
 -   通过函数方式调用
 -   自定义外观模式
 
-划重点：
+**划重点：**
 
 -   `themeMode`用来定义主题亮色还是暗色，或者随系统；`appearance`用来定义主题风格
 -   但目前相互定义会存在问题，所以多主题、多风格目前可能是个问题
@@ -72,7 +72,7 @@
 -   包含章节：
     -   进阶使用-组件研发[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/components-usage)]
 
-包含：
+**包含：**
 
 -   覆写组件样式
 -   独立样式
@@ -86,7 +86,7 @@
 -   包含章节：
     -   进阶使用-集成styled[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/styled)]
 
-包含：
+**包含：**
 
 -   `styled` 典型的主题消费方式
 -   `styled` 与 `ThemeProvider` 集成
@@ -95,6 +95,30 @@
 -   全局统一集成 `styled`
 
 ---- 分割线 ----
+
+#### 从Sass.css迁移
+
+-   URL: `/scss`
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/tree/main/src/components/scss)]
+-   包含章节：
+    -   `Sass` 应用手动迁移[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/migrate-less-application)]
+    -   `Sass` 组件迁移[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/migrate-less-component)]
+
+**说明：**
+
+1. 官方文档是迁移`Less.css`，由于`create-react-app`默认支持`Sass.css`，而它们几乎相近因此采用`Sass.css`
+2. 由于不是真的要迁移项目，因此示例的重点将放在`Sass.css`和`Css-in-js`的不同实现上
+3. 在示例剥离了组件和`style`，这样相同的组件无论传入的是`Sass.css`还是`Css-in-js`的`styles`，都能够一套组件多个实现方式
+
+**包含：**
+
+-   `Ant Design Pro` 中的 `HeaderSearch`，两种实现方式
+-   `procomponents` 中的 `ProCard` 的 `Static` 组件，两种实现方式
+
+**划重点：**
+
+-   通过`ThemeProvider`修改`token`后，是通过`useContext`上下文的方式实现
+-   所以在这种情况下通过`createStyles`实现`useStyles`，一定要确保是在是在`Provider`组件下的子组件中使用，才能正确获取上下文
 
 ## 如何运行
 
