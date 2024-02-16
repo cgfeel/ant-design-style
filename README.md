@@ -137,6 +137,8 @@
 -   父子联动的样式书写
 -   CSS Modules 全局样式覆写迁移
 
+---- 分割线 ----
+
 #### 主题定制
 
 -   URL: `/custom`
@@ -158,6 +160,8 @@
 -   其中 `classNames` 场景覆写，由于`antd 5.14.1`的bug造成组件目前不支持`classNames`，留一个坑待日后修复
 -   `antd 5.14.1`存在bug，不支持`classNames`演示: https://stackblitz.com/edit/vitejs-vite-1p4zer?file=src%2FApp.tsx
 -   `antd 5.12.1`正常演示: https://codepen.io/levi0001/pen/VwRgzOJ
+
+---- 分割线 ----
 
 ## 如何运行
 
