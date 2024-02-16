@@ -2,12 +2,12 @@ import styled from "@emotion/styled";
 import { App, Flex } from "antd";
 import { ThemeProvider } from "antd-style";
 import { FC } from "react";
-import useStyles from "./style";
+import useGlobalStyles from "../global";
 import Description from "./Description";
 import StatisticApp from "./StatisticApp";
 import Wraper from "./Wraper";
 import { itemsList } from "./server";
-import useGlobalStyles from "../global";
+import useStyles from "./style";
 
 declare module "@emotion/react" {
     export interface Theme {

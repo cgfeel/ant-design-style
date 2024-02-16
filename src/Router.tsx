@@ -2,6 +2,8 @@ import { Suspense, lazy } from "react";
 
 const router = {
     "/": lazy(() => import("./App")),
+    "/compile": lazy(() => import("./page/CompileStyle")),
+    "/custom": lazy(() => import("./page/Custom")),
     "/design": lazy(() => import("./page/Design")),
     "/scss": lazy(() => import("./page/Scss")),
     "/start": lazy(() => import("./page/Start")),

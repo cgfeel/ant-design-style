@@ -8,7 +8,7 @@
 
 #### 工程文件
 
--   使用`react-app-rewired`作为启动，编译脚本 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/package.json#L24C1-L29C7)]
+-   使用`react-app-rewired`作为启动，编译脚本，见`package.json`中`script`部分 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/package.json)]
 -   使用`customize-cra`作为`webpack`配置 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/config-overrides.js)]
     -   包含 2 套解决方案`react-app-rewired`和`customize-cra`
 -   在`src`目录下添加`.eslintrc.js`作为`eslint`自定义解决方案 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/.eslintrc.js)]
@@ -99,7 +99,7 @@
 #### 从Sass.css迁移
 
 -   URL: `/scss`
--   目录：[[查看](https://github.com/cgfeel/ant-design-style/tree/main/src/components/scss)]
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/Scss.tsx)]
 -   包含章节：
     -   `Sass` 应用手动迁移[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/migrate-less-application)]
     -   `Sass` 组件迁移[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/migrate-less-component)]
@@ -119,6 +119,43 @@
 
 -   通过`ThemeProvider`修改`token`后，是通过`useContext`上下文的方式实现
 -   所以在这种情况下通过`createStyles`实现`useStyles`，一定要确保是在是在`Provider`组件下的子组件中使用，才能正确获取上下文
+
+---- 分割线 ----
+
+### 最佳实践
+
+#### 样式书写
+
+-   URL: `/compile`
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/ComplieStyle.tsx)]
+-   包含章节：
+    -   父子联动的样式书写[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/nest-element-style)]
+    -   `CSS Modules` 全局样式覆写迁移[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/mirgration-less-global-style)]
+
+**包含：**
+
+-   父子联动的样式书写
+-   CSS Modules 全局样式覆写迁移
+
+#### 主题定制
+
+-   URL: `/custom`
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/Custom.tsx)]
+-   包含章节：
+    -   扩展自定义 `Token` 类型定义[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/custom-token-types)]
+    -   自定义 `antd` 组件样式[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/antd-override)]
+
+**包含：**
+
+-   扩展 `CustomToken` 对象类型
+-   基于 `ConfigProvider` 覆写 `antd` 的样式
+-   覆写样式名前缀
+-   抬升权重覆写
+-   多 `classNames` 场景覆写
+
+**备注：**
+
+-   其中 `classNames` 场景覆写，由于`antd 5.14.1`的bug造成组件目前不支持`classNames`，留一个坑待日后修复
 
 ## 如何运行
 
