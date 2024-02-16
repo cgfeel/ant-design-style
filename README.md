@@ -146,6 +146,7 @@
 -   包含章节：
     -   扩展自定义 `Token` 类型定义[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/custom-token-types)]
     -   自定义 `antd` 组件样式[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/antd-override)]
+    -   `antd` 静态方法的主题失效[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/static-message)]
 
 **包含：**
 
@@ -154,6 +155,7 @@
 -   覆写样式名前缀
 -   抬升权重覆写
 -   多 `classNames` 场景覆写
+-   `Modal`、`message` 等 `antd` 的静态方法不响应主题，如何解决？
 
 **备注：**
 
