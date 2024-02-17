@@ -17,6 +17,7 @@
         "antd-style": "^3.6.1",
         "classnames": "^2.5.1",
         "customize-cra": "^1.0.0",
+        "lodash-es": "^4.17.21",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-scripts": "5.0.1",
@@ -52,6 +53,7 @@
     },
     "devDependencies": {
         "@babel/plugin-transform-runtime": "^7.23.9",
+        "@types/lodash-es": "^4.17.12",
         "assert": "^2.1.0",
         "babel-plugin-antd-style": "^1.0.4",
         "browserify-zlib": "^0.2.0",

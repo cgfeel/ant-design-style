@@ -165,6 +165,21 @@
 
 ---- 分割线 ----
 
+#### 样式案例
+
+-   URL: `/stylish`
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/Stylish.tsx)]
+-   包含章节：
+    -   黏土风 UI[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/clay)]
+    -   样式组件[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/styled)]
+
+**包含：**
+
+-   黏土风格
+-   使用 Styled 构建风格样式组件
+
+---- 分割线 ----
+
 ## 如何运行
 
 ```

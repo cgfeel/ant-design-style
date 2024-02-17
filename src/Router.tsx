@@ -8,6 +8,7 @@ const router = {
     "/scss": lazy(() => import("./page/Scss")),
     "/start": lazy(() => import("./page/Start")),
     "/styled": lazy(() => import("./page/Styled")),
+    "/stylish": lazy(() => import("./page/Stylish")),
     "/theme": lazy(() => import("./page/Theme")),
 };
 
