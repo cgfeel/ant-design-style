@@ -172,7 +172,7 @@
 -   包含章节：
     -   黏土风 UI[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/clay)]
     -   样式组件[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/styled)]
-    -   MacOS 选择器[[查看](https://github.com/cgfeel/ant-design-style/tree/main/src/components/stylish/floating)]
+    -   MacOS 选择器[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/mac-select)]
 
 **包含：**
 
