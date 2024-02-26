@@ -178,7 +178,8 @@
 
 -   黏土风格：通过`customStylish`创建公共样式
 -   使用 `Styled` 构建风格样式组件
--   结合 `floating-ui` 与 `antd-style` 实现的 OSX 交互风格的选择器
+-   结合 `floating-ui`[[查看](https://floating-ui.com/)] 与 `antd-style` 实现的 OSX 交互风格的选择器
+-   通过`use-merge-value`[[查看](https://github.com/chenshuai2144/merge-value-hooks)]优化`useState`
 
 > -   其中`floating-ui`文档阅读记录见组件备注，有兴趣可查看：https://github.com/cgfeel/ant-design-style/blob/main/src/components/stylish/floating/select/index.tsx
 > -   除此之外还有`use-merge-value`，请启动项目，源码解读见”MacOS 选择器“示例下方备注
