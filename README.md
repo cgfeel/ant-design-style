@@ -159,7 +159,7 @@
 
 **备注：**
 
--   其中 `classNames` 场景覆写，`antd 5.14.1`起在文档中已去掉`affixWrapper`，因此通过父组件样式提权覆盖的方式实现
+-   其中 `classNames` 场景覆写，`antd 5.14.1`起在文档中已去掉`input`组件的`affixWrapper`属性，因此通过父组件样式提权覆盖的方式实现
 -   `antd 5.12.1`及以下不受影响: https://codepen.io/levi0001/pen/VwRgzOJ
 
 ---- 分割线 ----
