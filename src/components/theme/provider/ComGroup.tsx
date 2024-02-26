@@ -2,6 +2,12 @@ import { Button, Card, Flex, Modal, message } from "antd";
 import { useTheme } from "antd-style";
 import { FC } from "react";
 
+declare module "antd/es/modal/PurePanel" {
+    export interface PurePanelProps {
+        autoFocusButton?: boolean;
+    }
+}
+
 const StaticModal = Modal._InternalPanelDoNotUseOrYouWillBeFired;
 const StaticMessage = message._InternalPanelDoNotUseOrYouWillBeFired;
 
@@ -18,7 +24,7 @@ const ComGroup: FC = () => {
             </Flex>
             <Card>卡片效果</Card>
             <Flex gap={8}>
-                <StaticModal title="成功" type="success">
+                <StaticModal title="成功" type="success" autoFocusButton={false}>
                     这是一个静态化呈现的成功弹窗
                 </StaticModal>
                 <StaticMessage content="失败提示" type="error"></StaticMessage>
