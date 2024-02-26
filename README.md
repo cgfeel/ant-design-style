@@ -172,11 +172,15 @@
 -   包含章节：
     -   黏土风 UI[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/clay)]
     -   样式组件[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/styled)]
+    -   MacOS 选择器[[查看](https://github.com/cgfeel/ant-design-style/tree/main/src/components/stylish/floating)]
 
 **包含：**
 
 -   黏土风格：通过`customStylish`创建公共样式
 -   使用 `Styled` 构建风格样式组件
+-   结合 `floating-ui` 与 `antd-style` 实现的 OSX 交互风格的选择器
+
+> 其中`floating-ui`文档阅读记录见组件备注，有兴趣可查看：https://github.com/cgfeel/ant-design-style/blob/main/src/components/stylish/floating/select/item/index.tsx
 
 ---- 分割线 ----
 

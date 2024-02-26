@@ -426,7 +426,6 @@ const MacSelect: FC<MacSelectProps> = ({ defaultValue, value, options = [], pref
                                                 // 完成点击后，如果允许下拉框选择的情况下，设置选中的索引并关闭悬浮元素
                                                 // 允许不同设备在选择后触发`onClick`
                                                 onClick() {
-                                                    console.log("aaa");
                                                     if (allowSelectRef.current) {
                                                         setSelectedIndex(i);
                                                         setOpen(false);
@@ -434,7 +433,6 @@ const MacSelect: FC<MacSelectProps> = ({ defaultValue, value, options = [], pref
                                                 },
                                                 // 按下键盘后，允许下拉框选择
                                                 onKeyDown() {
-                                                    console.log("ccc");
                                                     allowSelectRef.current = true;
                                                 },
                                                 /**
@@ -447,7 +445,6 @@ const MacSelect: FC<MacSelectProps> = ({ defaultValue, value, options = [], pref
                                                  *  - 从而避免了列表选项立即选择
                                                  */
                                                 onMouseUp() {
-                                                    console.log("bbb");
                                                     if (!allowMouseUpRef.current) return;
 
                                                     // 在允许选择的情况下，处理和`onClick`一样的事
