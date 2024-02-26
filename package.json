@@ -14,7 +14,7 @@
         "@types/node": "^16.18.79",
         "@types/react": "^18.2.55",
         "@types/react-dom": "^18.2.18",
-        "antd": "^5.14.0",
+        "antd": "^5.14.2",
         "antd-style": "^3.6.1",
         "classnames": "^2.5.1",
         "customize-cra": "^1.0.0",

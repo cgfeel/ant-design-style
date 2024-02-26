@@ -3,11 +3,15 @@ import { createStyles } from "antd-style";
 import { FC } from "react";
 import useGlobalStyles from "./global";
 
-const useStyles = createStyles(({ token, css }) => ({
+const useStyles = createStyles(({ prefixCls, token, css }) => ({
     bg: css`
         background: ${token.colorBgLayout};
         margin-bottom: 24px;
         padding: 24px;
+        & .${prefixCls}-input-affix-wrapper {
+            background-color: transparent;
+            border: 2px solid ${token.colorBorder};
+        }
     `,
     input: css`
         background: transparent;
@@ -37,7 +41,9 @@ const InputClassNames: FC = () => {
                 />
             </div>
             <div>
-                <code>antd 5.14.1</code>的<code>classNames</code>目前存在bug，留一个坑
+                <code>antd 5.14.1</code>文档中已将<code>classNames</code>的<code>affixWrapper</code>属性去掉（虽然
+                <code>Typescript</code>中仍旧保留但已无实际用途），所以这里通过父级样式覆盖的方式代替
+                <code>classNames</code>
             </div>
         </div>
     );

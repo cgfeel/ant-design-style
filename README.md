@@ -159,9 +159,8 @@
 
 **备注：**
 
--   其中 `classNames` 场景覆写，由于`antd 5.14.1`的bug造成组件目前不支持`classNames`，留一个坑待日后修复
--   `antd 5.14.1`存在bug，不支持`classNames`演示: https://stackblitz.com/edit/vitejs-vite-1p4zer?file=src%2FApp.tsx
--   `antd 5.12.1`正常演示: https://codepen.io/levi0001/pen/VwRgzOJ
+-   其中 `classNames` 场景覆写，`antd 5.14.1`起在文档中已去掉`affixWrapper`，因此通过父组件样式提权覆盖的方式实现
+-   `antd 5.12.1`及以下不受影响: https://codepen.io/levi0001/pen/VwRgzOJ
 
 ---- 分割线 ----
 
