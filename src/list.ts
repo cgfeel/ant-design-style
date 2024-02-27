@@ -45,6 +45,10 @@ export const router = {
         name: "创建样式",
         path: lazy(() => import("./page/CreateApiCom")),
     },
+    "/provider": {
+        name: "容器组件",
+        path: lazy(() => import("./page/ProviderCom")),
+    },
 } as const;
 
 export type RouterKey = keyof typeof router;
