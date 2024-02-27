@@ -185,6 +185,26 @@
 
 ---- 分割线 ----
 
+### API
+
+#### 创建样式
+
+-   URL: `/create`
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/tree/main/src/components/create)]
+-   包含章节：
+    -   `createStyles`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/create-styles)]
+    -   `createStylish`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/create-stylish)]
+    -   `createGlobalStyle`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/global-styles)]
+
+**包含：**
+
+-   `createStyles`创建样式、`responsive`响应式处理、`prefixCls` 与 `iconPrefixCls` 前缀覆盖
+-   `ClassNameGeneratorOption`：`label` 添加样式后缀，`hashPriority` 样式覆写
+-   `createStylish`创建公共样式、`createStylish`实现黏土风 UI
+-   `createGlobalStyle`创建全局样式、`createGlobalStyle`结合 `antd` 的 `token` 使用
+
+> 由于目前版本的`antd-style`在使用 `label` 添加样式后缀无效（包含官网案例），所以用`emotion`做了一个对比演示
+
 ## 如何运行
 
 ```
