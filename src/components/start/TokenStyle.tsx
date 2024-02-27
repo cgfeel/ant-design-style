@@ -1,55 +1,25 @@
-import { SmileOutlined } from "@ant-design/icons";
-import { Button, Space } from "antd";
 import { createStyles } from "antd-style";
 import { FC } from "react";
+import CommonCard from "./CommonCard";
 
-const useStyles = createStyles(({ css, token }) => {
-    const commonCard = css`
-        border-radius: ${token.borderRadiusLG}px;
-        padding: ${token.paddingLG}px;
-    `;
-    return {
-        container: css`
-            background-color: ${token.colorBgLayout};
-            padding: 24px;
-        `,
-        defaultCard: css`
-            ${commonCard}
-            background-color: ${token.colorBgContainer};
-            color: ${token.colorText};
-        `,
-        primaryCard: css`
-            ${commonCard}
-            background-color: ${token.colorPrimary};
-            color: ${token.colorTextLightSolid};
-        `,
-        wraper: css`
-            margin-bottom: 100px;
-            & code {
-                background-color: #f2f2f2;
-                border: 1px solid #ddd;
-                margin: 0 2px;
-                padding: 4px;
-            }
-        `,
-    };
-});
+const useStyles = createStyles(({ css, token }) => ({
+    wraper: css`
+        margin-bottom: 100px;
+        & code {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            margin: 0 2px;
+            padding: 4px;
+        }
+    `,
+}));
 
 const TokenStyle: FC = () => {
     const { styles } = useStyles();
     return (
         <div className={styles.wraper}>
             <h2>使用 antd 的 token</h2>
-            <div className={styles.container}>
-                <Space direction="vertical" size={16} style={{ width: "100%" }}>
-                    <Space>
-                        <Button title="功能按钮的说明" icon={<SmileOutlined />} />
-                        操作按钮
-                    </Space>
-                    <div className={styles.defaultCard}>普通卡片</div>
-                    <div className={styles.primaryCard}>主要卡片</div>
-                </Space>
-            </div>
+            <CommonCard />
             <div>
                 <p>
                     <code>css标签模板字面量</code>在这个语法中，函数名（例子中是<code>css</code>
