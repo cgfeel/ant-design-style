@@ -6,6 +6,8 @@ import AppContainer from "../components/provider/AppContainer";
 import Appearance from "../components/provider/Appearance";
 import AppStyle from "../components/provider/AppStyle";
 import ContainerBody from "../components/provider/ContainerBody";
+import InsertionPoint from "../components/provider/InsertionPoint";
+import Speedy from "../components/provider/Speedy";
 import ProviderTheme from "../components/provider/usetheme";
 import CustomToken from "../components/provider/usetheme/CustomToken";
 import ThemeToken from "../components/theme/defined/ThemeToken";
@@ -34,6 +36,8 @@ const ProviderCom: FC = () => (
             <ActionIndex />
             <AppContainer />
             <ContainerBody />
+            <InsertionPoint />
+            <Speedy />
         </AppCenter>
     </>
 );

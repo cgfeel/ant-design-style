@@ -205,6 +205,25 @@
 
 > 由于目前版本的`antd-style`在使用 `label` 添加样式后缀无效（包含官网案例），所以用`emotion`做了一个对比演示
 
+---- 分割线 ----
+
+#### 容器组件
+
+-   URL: `/provider`
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/ProviderCom.tsx)]
+-   包含章节：
+    -   `ThemeProvider`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/theme-provider)]
+    -   `StyleProvider`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/style-provider)]
+
+**包含：**
+
+-   `appearance`设置`theme`
+-   `useTheme`获取`token`设置样式，通过 `token` 设置 `theme`，自定义`token`
+-   基础样式重置，消费静态实例方法，添加容器作用域样式
+-   修改 `container`，修改样式注入点，开启 `speedy` 极速模式
+
+---- 分割线 ----
+
 ## 如何运行
 
 ```
