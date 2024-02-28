@@ -224,6 +224,25 @@
 
 ---- 分割线 ----
 
+#### Hooks、高级设置
+
+-   URL: `/hooks`
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/HookApi.tsx)]
+-   包含章节：
+    -   `useTheme`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/use-theme)]
+    -   `useThemeMode`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/use-theme-mode)]
+    -   `useResponsive`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/use-responsive)]
+    -   `createInstance`[[查看](https://ant-design.github.io/antd-style/zh-CN/api/create-instance)]
+
+**包含：**
+
+-   `useTheme`获取`token`设置样式
+-   `useThemeMode`获取`theme`信息
+-   `useResponsive`获取媒体响应值、通过`theme`修改媒体响应值
+-   `createInstance`自定义创建实例、独立样式演示
+
+---- 分割线 ----
+
 ## 如何运行
 
 ```
