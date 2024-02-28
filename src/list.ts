@@ -49,6 +49,10 @@ export const router = {
         name: "容器组件",
         path: lazy(() => import("./page/ProviderCom")),
     },
+    "/hooks": {
+        name: "HOOKS",
+        path: lazy(() => import("./page/HookApi")),
+    },
 } as const;
 
 export type RouterKey = keyof typeof router;
