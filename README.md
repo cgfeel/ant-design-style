@@ -269,7 +269,7 @@ https://github.com/cgfeel/ant-design-style/assets/578141/13ce2c9e-8f37-491e-a90e
 - 在入口页的`header`挂起一段`js`，用于在首次打开时读取本地存储的`theme`，并存储系统主题 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/public/theme.js)]
 - 设置基础的主题模式 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/global.css)]
 - 设置一个`Context Provider`，用收集信息并对`ThemeProvider`做出调整 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/components/appTheme/AppProvider.tsx)]
-- 切换主题时需要分别对：`AppContext`、`useThemeMode`做出调增 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/components/appTheme/PickTheme.tsx)]
+- 切换主题时需要分别对：`AppContext`、`useThemeMode`做出调增 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/components/appTheme/Controller.tsx)]
 
 `ThemeProvider`的分为两部分
 
