@@ -1,15 +1,15 @@
 import { createStyles } from "antd-style";
 
-const useGlobalStyles = createStyles({
+const useGlobalStyles = createStyles(({ token }) => ({
     wraper: {
         marginBottom: 100,
         code: {
-            backgroundColor: "#f2f2f2",
-            border: "1px solid #ddd",
+            backgroundColor: token.colorBgLayout,
+            border: "1px solid " + token.colorBorder,
             padding: 4,
             margin: "0 2px",
         },
     },
-});
+}));
 
 export default useGlobalStyles;

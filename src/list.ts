@@ -53,6 +53,10 @@ export const router = {
         name: "HOOKS",
         path: lazy(() => import("./page/HookApi")),
     },
+    "/apptheme": {
+        name: "主题切换",
+        path: lazy(() => import("./page/AppTheme")),
+    },
 } as const;
 
 export type RouterKey = keyof typeof router;

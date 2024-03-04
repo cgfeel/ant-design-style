@@ -1,0 +1,13 @@
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    html[data-theme="auto"] {
+      color-scheme: dark;
+    }
+}

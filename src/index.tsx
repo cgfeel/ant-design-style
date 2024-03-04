@@ -1,26 +1,26 @@
-import React, { FC } from 'react';
-import ReactDOM from 'react-dom/client';
-import Router from './Router';
-import GithubCorner from './components/GithubCorner';
-import reportWebVitals from './reportWebVitals';
+import React, { FC } from "react";
+import ReactDOM from "react-dom/client";
+import Router from "./Router";
+import GithubCorner from "./components/GithubCorner";
+import reportWebVitals from "./reportWebVitals";
+import "./global.css";
+import "./theme.css";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 const App: FC = () => {
-  return (
-    <>
-      <Router />
-      <GithubCorner />
-    </>
-  );
+    return (
+        <>
+            <Router />
+            <GithubCorner />
+        </>
+    );
 };
 
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
