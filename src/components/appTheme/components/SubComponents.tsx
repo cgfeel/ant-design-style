@@ -25,6 +25,7 @@ const SubComponents: FC = () => {
     const { styles } = useStyles();
     return (
         <>
+            <TopLog className={styles.header} tips="Form" />
             <Form className={styles.form} labelCol={{ span: 8 }} wrapperCol={{ span: 8 }}>
                 <Form.Item label="数字输入框">
                     <InputNumber defaultValue={3} max={10} min={1} />
