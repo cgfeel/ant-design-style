@@ -4,7 +4,6 @@ import Router from "./Router";
 import GithubCorner from "./components/GithubCorner";
 import reportWebVitals from "./reportWebVitals";
 import "./global.css";
-import "./theme.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
