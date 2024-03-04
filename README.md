@@ -286,7 +286,7 @@ https://github.com/cgfeel/ant-design-style/assets/578141/13ce2c9e-8f37-491e-a90e
 - 优点：无需提前设置`CSS`变量并提权
 - 缺点：相对`SSR`可能会有一个会有一个渐进的视觉差（可忽略不计）
 
-`SSR`主题切换见 [[查看](https://ant-design.github.io/antd-style/zh-CN/guide/ssr)]，也可以将CSR的解决方式代替SSR，具体怎么用需要根据实际情况决定
+`SSR`主题切换 [[查看](https://github.com/cgfeel/next.v2/blob/master/docs/antd-theme.md)]，也可以将CSR的解决方式代替SSR，具体怎么用需要根据实际情况决定
 
 ## 如何运行
 
