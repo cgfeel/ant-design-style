@@ -61,7 +61,6 @@
 
 -   `themeMode`用来定义主题亮色还是暗色，或者随系统；`appearance`用来定义主题风格
 -   但目前相互定义会存在问题，所以多主题、多风格目前可能是个问题
--   `antd-style`有个致命的问题，存在闪屏，如果有要求可以通过`next-theme`代替，这不在本次研究范围
 
 ---- 分割线 ----
 
@@ -242,6 +241,52 @@
 -   `createInstance`自定义创建实例、独立样式演示
 
 ---- 分割线 ----
+
+#### 服务器渲染、无闪烁切换主题
+
+-   URL: `/apptheme`
+-   目录：[[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/page/AppTheme.tsx)]
+-   包含章节：
+    -   集成 `SSR`[[查看](https://ant-design.github.io/antd-style/zh-CN/guide/ssr)]
+    -   暗色模式下首屏会 “闪” 一下[[查看](https://ant-design.github.io/antd-style/zh-CN/best-practice/fix-switch-theme-fouc)]
+
+**包含：**
+
+-   服务端渲染见NextJS记录：https://github.com/cgfeel/next.v2/blob/master/docs/antd-theme.md
+-   csr下刷新无闪缩，自适应系统主题，详细见下方总结 [[查看](#csr主题切换无闪烁)]
+
+---- 分割线 ----
+
+## 额外总结
+
+### CSR主题切换无闪烁
+
+演示：
+
+https://github.com/cgfeel/ant-design-style/assets/578141/13ce2c9e-8f37-491e-a90e-79e1379aaf22
+
+
+- 在入口页的`header`挂起一段`js`，用于在首次打开时读取本地存储的`theme`，并存储系统主题 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/public/theme.js)]
+- 设置基础的主题模式 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/global.css)]
+- 设置一个`Context Provider`，用收集信息并对`ThemeProvider`做出调整 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/components/appTheme/AppProvider.tsx)]
+- 切换主题时需要分别对：`AppContext`、`useThemeMode`做出调增 [[查看](https://github.com/cgfeel/ant-design-style/blob/main/src/components/appTheme/PickTheme.tsx)]
+
+`ThemeProvider`的分为两部分
+
+- `defaultThemeMode`：根据用户选择主题的情况，用于展示初始值状态
+- `theme`：通过`algorithm`根据情况选择主题算法
+
+修改主题分为两部分：
+
+- 通过`AppContext.Provider`的`change`收集主题更改信息做出调整
+- 通过`useEffect`监听`matchMedia`，根据系统变化做出调整
+
+对比之前总结的服务器主题切换的优缺点：
+
+- 优点：无需提前设置`CSS`变量并提权
+- 缺点：相对`SSR`可能会有一个会有一个渐进的视觉差（可忽略不计）
+
+`SSR`主题切换见 [[查看](https://ant-design.github.io/antd-style/zh-CN/guide/ssr)]，也可以将CSR的解决方式代替SSR，具体怎么用需要根据实际情况决定
 
 ## 如何运行
 
