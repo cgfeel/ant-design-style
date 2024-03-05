@@ -31,5 +31,5 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = override(
     addWebpackPlugin(new NodePolyfillPlugin()),
-    fixBabelImports('antd-style', require.resolve('babel-plugin-antd-style')),
+    // fixBabelImports('antd-style', require.resolve('babel-plugin-antd-style')),
 )
